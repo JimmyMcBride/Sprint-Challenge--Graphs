@@ -1,4 +1,4 @@
-## Description
+# Description
 
 You are provided with a pre-generated graph consisting of 500 rooms. You are responsible for filling `traversal_path` with directions that, when walked in order, will visit every room on the map at least once.
 
@@ -9,12 +9,11 @@ Open `adv.py`. There are four parts to the provided code:
 * Test code. Run the tests by typing `python3 adv.py` in your terminal.
 * REPL code. You can uncomment this and run `python3 adv.py` to walk around the map.
 
-
 You may find the commands `player.current_room.id`, `player.current_room.get_exits()` and `player.travel(direction)` useful.
 
 To solve this path, you'll want to construct your own traversal graph. You start in room `0`, which contains exits `['n', 's', 'w', 'e']`. Your starting graph should look something like this:
 
-```
+```python
 {
   0: {'n': '?', 's': '?', 'w': '?', 'e': '?'}
 }
@@ -22,7 +21,7 @@ To solve this path, you'll want to construct your own traversal graph. You start
 
 Try moving south and you will find yourself in room `5` which contains exits `['n', 's', 'e']`. You can now fill in some entries in your graph:
 
-```
+```python
 {
   0: {'n': '?', 's': 5, 'w': '?', 'e': '?'},
   5: {'n': 0, 's': '?', 'e': '?'}
@@ -57,11 +56,9 @@ It is very difficult to calculate the shortest possible path that traverses the 
 
 My best path is 957 moves. Can you find a shorter path?
 
-
 ## Rubric
-| OBJECTIVE | TASK | 1 - DOES NOT MEET Expectations | 2 - MEETS Expectations | 3 - EXCEEDS Expectations | SCORE |
-| ---------- | ----- | ------- | ------- | ------- | -- |
-| _Student can demonstrate applied knowledge of Graph Theory by traversing a large map_ | Complete traversal of a large Graph | Student unable to produce a valid traversal path of 2000 moves or less | Student is able to produce a valid traversal path between 960 and 2000 | Student produces a valid traversal path of 959 moves or less |  |
-| **FINAL SCORE** | | **0-1** | **2** | **3** |  |
 
-
+| OBJECTIVE                                                                             | TASK                                | 1 - DOES NOT MEET Expectations                                         | 2 - MEETS Expectations                                                 | 3 - EXCEEDS Expectations                                     | SCORE |
+| ------------------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------ | ----- |
+| _Student can demonstrate applied knowledge of Graph Theory by traversing a large map_ | Complete traversal of a large Graph | Student unable to produce a valid traversal path of 2000 moves or less | Student is able to produce a valid traversal path between 960 and 2000 | Student produces a valid traversal path of 959 moves or less |       |
+| **FINAL SCORE**                                                                       |                                     | **0-1**                                                                | **2**                                                                  | **3**                                                        |       |
